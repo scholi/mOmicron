@@ -68,7 +68,7 @@ classdef Omicron
             end
 
             if length(ydata)<length(xvalues)
-                ydata = padarray(ydata,len(xvalues)-length(ydata),nan,'post');
+                ydata = [ydata, NaN(1, length(xvalues)-length(ydata))];
             end
             
         end
